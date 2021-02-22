@@ -44,6 +44,7 @@ public class Buttons extends JPanel implements ActionListener{
             for(int i = 0; i < button.length; i++){
                 button[i].setText("");
                 button[i].setEnabled(true);
+                button[i].setBackground(Color.WHITE);
             }
         }
 
@@ -57,7 +58,7 @@ public class Buttons extends JPanel implements ActionListener{
             if(source.equals(button[i])){
                 button[i].setText(""+symbol);
                 button[i].setEnabled(false);
-                // checkResult(i);
+                checkResult();
             }
             
         
@@ -65,22 +66,81 @@ public class Buttons extends JPanel implements ActionListener{
 
 
     }
-    /* public void checkResult(){
+     public void checkResult(){
 
-
-        String[] ch = new String[3];
-    int[] id = new int[3];
-    for(int i = 0; i < 3; i++){
+    
+    String[] ch = new String[button.length];
+    int[] id = new int[button.length];
+    for(int i = 0; i < button.length; i++){
       ch[i] = button[i].getText();
       id[i] = i;
     }
     if(ch[0].equals(ch[1]) && ch[1].equals(ch[2]) && ch[0] != ""){
-      button[id[0]].setBackground(Color.GREEN);
-      button[id[1]].setBackground(Color.GREEN);
-      button[id[2]].setBackground(Color.GREEN);
-    } 
+        button[0].setBackground(Color.GREEN);
+        button[1].setBackground(Color.GREEN);
+        button[2].setBackground(Color.GREEN);
+            for(int i = 0; i < button.length; i++){
+                button[i].setEnabled(false);
+            }
+    }else if(ch[3].equals(ch[4]) && ch[4].equals(ch[5]) && ch[4] != ""){
+        button[3].setBackground(Color.GREEN);
+        button[4].setBackground(Color.GREEN);
+        button[5].setBackground(Color.GREEN);
+            for(int i = 0; i < button.length; i++){
+                button[i].setEnabled(false);
+            }
+    }else if(ch[6].equals(ch[7]) && ch[7].equals(ch[8]) && ch[7] != ""){
+        button[6].setBackground(Color.GREEN);
+        button[7].setBackground(Color.GREEN);
+        button[8].setBackground(Color.GREEN);
+            for(int i = 0; i < button.length; i++){
+                button[i].setEnabled(false);
+            }
+    }else if(ch[0].equals(ch[3]) && ch[3].equals(ch[6]) && ch[0] != ""){
+        button[0].setBackground(Color.GREEN);
+        button[3].setBackground(Color.GREEN);
+        button[6].setBackground(Color.GREEN);
+            for(int i = 0; i < button.length; i++){
+                button[i].setEnabled(false);
+            }
+    }else if(ch[0].equals(ch[3]) && ch[3].equals(ch[7]) && ch[0] != ""){
+        button[0].setBackground(Color.GREEN);
+        button[4].setBackground(Color.GREEN);
+        button[8].setBackground(Color.GREEN);
+            for(int i = 0; i < button.length; i++){
+                button[i].setEnabled(false);
+            }
+    }else if(ch[1].equals(ch[4]) && ch[4].equals(ch[7]) && ch[1] != ""){
+        button[1].setBackground(Color.GREEN);
+        button[4].setBackground(Color.GREEN);
+        button[7].setBackground(Color.GREEN);
+            for(int i = 0; i < button.length; i++){
+                button[i].setEnabled(false);
+            }
+    }else if(ch[2].equals(ch[5]) && ch[5].equals(ch[8]) && ch[2] != ""){
+        button[2].setBackground(Color.GREEN);
+        button[5].setBackground(Color.GREEN);
+        button[8].setBackground(Color.GREEN);
+            for(int i = 0; i < button.length; i++){
+                button[i].setEnabled(false);
+            }
+    }else if(ch[0].equals(ch[4]) && ch[4].equals(ch[8]) && ch[0] != ""){
+        button[0].setBackground(Color.GREEN);
+        button[4].setBackground(Color.GREEN);
+        button[8].setBackground(Color.GREEN);
+            for(int i = 0; i < button.length; i++){
+                button[i].setEnabled(false);
+            }
+    }else if(ch[2].equals(ch[4]) && ch[4].equals(ch[6]) && ch[2] != ""){
+        button[2].setBackground(Color.GREEN);
+        button[4].setBackground(Color.GREEN);
+        button[6].setBackground(Color.GREEN);
+            for(int i = 0; i < button.length; i++){
+                button[i].setEnabled(false);
+            }
+    }
 
 
     // checkResult(i);
-} */
+} 
 }
